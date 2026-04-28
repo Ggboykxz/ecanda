@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet, SafeAreaView, Pressable, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../src/constants/theme';
-import { ROLES, ROLE_LABELS, ROLE_ICONS } from '../../src/constants/roles';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { ROLES, ROLE_LABELS, ROLE_ICONS } from '@/src/constants/roles';
 
 const roles = [
   { role: ROLES.CLIENT, description: 'Achète des produits locaux', color: COLORS.primary },

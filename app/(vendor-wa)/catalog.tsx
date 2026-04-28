@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, SafeAreaView, FlatList, Pressable, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF } from '../../../src/utils/formatCurrency';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF } from '@/src/utils/formatCurrency';
 
 const MOCK_PRODUCTS = [
   { id: '1', title: 'Sac en fibres naturelles', price: 15000, stock: 15, image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400', shareCount: 45 },

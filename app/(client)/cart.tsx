@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../src/constants/theme';
-import Button from '../../src/components/ui/Button';
-import { formatXAF } from '../../src/utils/formatCurrency';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import Button from '@/src/components/ui/Button';
+import { formatXAF } from '@/src/utils/formatCurrency';
 
 const MOCK_CART_ITEMS = [
   {

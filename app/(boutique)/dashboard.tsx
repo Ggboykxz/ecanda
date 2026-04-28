@@ -2,9 +2,9 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable } from 'rea
 import { Ionicons } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { Link } from 'expo-router';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF, formatRelativeTime } from '../../../src/utils/formatCurrency';
-import Badge from '../../../src/components/ui/Badge';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
+import Badge from '@/src/components/ui/Badge';
 
 const stats = [
   { label: 'Ventes today', value: '125 000', icon: 'trending-up', color: COLORS.success },

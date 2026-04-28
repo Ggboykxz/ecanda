@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../src/constants/theme';
-import Badge from '../../src/components/ui/Badge';
-import { formatXAF, formatRelativeTime } from '../../src/utils/formatCurrency';
-import { ORDER_STATUS_LABELS, ORDER_STATUS_COLORS } from '../../src/types/order.types';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import Badge from '@/src/components/ui/Badge';
+import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
+import { ORDER_STATUS_LABELS, ORDER_STATUS_COLORS } from '@/src/types/order.types';
 
 const MOCK_ORDERS = [
   {

@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, TextInput, Pressable, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../src/constants/theme';
-import ProductCard from '../../src/components/shared/ProductCard';
-import Badge from '../../src/components/ui/Badge';
-import { CATEGORIES } from '../../src/types/product.types';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import ProductCard from '@/src/components/shared/ProductCard';
+import Badge from '@/src/components/ui/Badge';
+import { CATEGORIES } from '@/src/types/product.types';
 
 const MOCK_PRODUCTS = [
   {

@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF, formatRelativeTime } from '../../../src/utils/formatCurrency';
-import { ORDER_STATUS_LABELS } from '../../../src/types/order.types';
-import Badge from '../../../src/components/ui/Badge';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
+import { ORDER_STATUS_LABELS } from '@/src/types/order.types';
+import Badge from '@/src/components/ui/Badge';
 
 const MOCK_ORDERS = [
   { id: 'ORD-001', source: 'Groupe Famille', customer: 'Marie K.', phone: '+241 77 XX XX XX', items: [{ title: 'Sac en fibres', qty: 1, price: 15000, image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400' }], total: 15500, status: 'pending', createdAt: new Date(Date.now() - 15 * 60000) },

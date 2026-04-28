@@ -2,8 +2,8 @@ import { View, Text, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS } from '../src/constants/theme';
-import Button from '../src/components/ui/Button';
+import { COLORS, SPACING, FONT_SIZE, RADIUS } from '@/src/constants/theme';
+import Button from '@/src/components/ui/Button';
 
 export default function WelcomeScreen() {
   return (

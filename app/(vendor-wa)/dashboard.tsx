@@ -2,8 +2,8 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image } fr
 import { Ionicons } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { Link } from 'expo-router';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF, formatRelativeTime } from '../../../src/utils/formatCurrency';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
 
 const stats = [
   { label: 'Ventes aujourd\'hui', value: '8 500', icon: 'trending-up', color: COLORS.success },

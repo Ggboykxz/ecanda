@@ -3,10 +3,10 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, TextInput,
 import { Ionicons } from '@expo/vector-icons';
 import { FlashList } from '@shopify/flash-list';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../src/constants/theme';
-import Button from '../../src/components/ui/Button';
-import ProductCard from '../../src/components/shared/ProductCard';
-import { formatXAF } from '../../src/utils/formatCurrency';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import Button from '@/src/components/ui/Button';
+import ProductCard from '@/src/components/shared/ProductCard';
+import { formatXAF } from '@/src/utils/formatCurrency';
 
 const categories = [
   { id: 'all', name: 'Tout', icon: 'apps' },

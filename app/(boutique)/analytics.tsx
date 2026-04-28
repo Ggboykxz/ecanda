@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF } from '../../../src/utils/formatCurrency';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF } from '@/src/utils/formatCurrency';
 
 const weeklyData = [
   { day: 'Lun', orders: 12, revenue: 85000 },

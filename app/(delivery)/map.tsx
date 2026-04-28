@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF } from '../../../src/utils/formatCurrency';
-import Button from '../../../src/components/ui/Button';
-import Badge from '../../../src/components/ui/Badge';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF } from '@/src/utils/formatCurrency';
+import Button from '@/src/components/ui/Button';
+import Badge from '@/src/components/ui/Badge';
 
 const availableDeliveries = [
   { id: 'DEL-001', vendor: 'Ferme du Nord', pickup: 'Libreville Centre', delivery: 'Akanda', distance: '3.2 km', earnings: 2500, items: 2 },

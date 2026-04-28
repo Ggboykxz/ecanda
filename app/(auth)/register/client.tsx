@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, Pressable, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE } from '../../src/constants/theme';
-import Input from '../../src/components/ui/Input';
-import Button from '../../src/components/ui/Button';
+import { COLORS, SPACING, FONT_SIZE } from '@/src/constants/theme';
+import Input from '@/src/components/ui/Input';
+import Button from '@/src/components/ui/Button';
 
 export default function RegisterClientScreen() {
   const [name, setName] = useState('');

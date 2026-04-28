@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF } from '../../../src/utils/formatCurrency';
-import Button from '../../../src/components/ui/Button';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF } from '@/src/utils/formatCurrency';
+import Button from '@/src/components/ui/Button';
 
 const MOCK_PRODUCTS = [
   { id: '1', title: 'Poulet fermier - 2kg', price: 8500, stock: 50, isAvailable: true, image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=400', category: 'Alimentation' },

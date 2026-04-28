@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
 
 const channels = [
   { id: '1', name: 'Groupe Famille', type: 'group', members: 156, isActive: true, orders: 12 },

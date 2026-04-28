@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF, formatRelativeTime } from '../../../src/utils/formatCurrency';
-import { ORDER_STATUS_LABELS } from '../../../src/types/order.types';
-import Badge from '../../../src/components/ui/Badge';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
+import { ORDER_STATUS_LABELS } from '@/src/types/order.types';
+import Badge from '@/src/components/ui/Badge';
 
 const deliveries = [
   { id: 'DEL-001', vendor: 'Ferme du Nord', items: [{ title: 'Poulet fermier', image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=400', qty: 2 }], pickup: 'Libreville Centre', delivery: 'Akanda', earnings: 2500, status: 'in_progress', createdAt: new Date(Date.now() - 30 * 60000) },

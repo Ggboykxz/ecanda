@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../../src/constants/theme';
-import { formatXAF, formatRelativeTime } from '../../../src/utils/formatCurrency';
-import { ORDER_STATUS_LABELS } from '../../../src/types/order.types';
-import Badge from '../../../src/components/ui/Badge';
-import Button from '../../../src/components/ui/Button';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
+import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
+import { ORDER_STATUS_LABELS } from '@/src/types/order.types';
+import Badge from '@/src/components/ui/Badge';
+import Button from '@/src/components/ui/Button';
 
 const MOCK_ORDERS = [
   { id: 'ORD-001', customer: 'Marie K.', phone: '+241 77 XX XX XX', address: 'Libreville, Akanda', items: [{ title: 'Poulet fermier', qty: 2, price: 8500, image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=400' }, { title: 'Beurre de karité', qty: 1, price: 3500, image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400' }], subtotal: 20500, deliveryFee: 1500, total: 22000, status: 'pending', payment: 'paid', createdAt: new Date(Date.now() - 15 * 60000) },

@@ -5,7 +5,7 @@ import Animated, { FadeInDown } from 'react-native-reanimated';
 import { COLORS, SPACING, RADIUS, FONT_SIZE, SHADOW } from '../../constants/theme';
 import { formatXAF } from '../../utils/formatCurrency';
 import type { Product } from '../../types/product.types';
-import Badge from './Badge';
+import Badge from '../ui/Badge';
 
 interface ProductCardProps {
   product: Product;
