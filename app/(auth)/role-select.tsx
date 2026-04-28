@@ -30,7 +30,7 @@ export default function RoleSelectScreen() {
 
         <View style={styles.rolesGrid}>
           {roles.map((item) => (
-            <Link key={item.role} href={`/(auth)/register/${item.role === ROLES.VENDOR_WA ? 'vendor-whatsapp' : item.role}`} asChild>
+            <Link key={item.role} href="/(auth)/register/client" asChild>
               <Pressable style={styles.roleCard}>
                 <View style={[styles.iconContainer, { backgroundColor: `${item.color}15` }]}>
                   <Ionicons

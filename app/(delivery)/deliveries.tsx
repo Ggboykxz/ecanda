@@ -62,7 +62,7 @@ export default function DeliveryDeliveriesScreen() {
             <View style={styles.itemsRow}>
               {delivery.items.map((item, idx) => (
                 <View key={idx} style={styles.itemPreview}>
-                  <Image source={{ uri: item.image }} style={styles.itemImage} contentFit="cover" />
+                  <Image source={{ uri: item.image }} style={styles.itemImage} resizeMode="cover" />
                   <Text style={styles.itemQty}>x{item.qty}</Text>
                 </View>
               ))}

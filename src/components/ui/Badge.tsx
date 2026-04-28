@@ -12,22 +12,22 @@ interface BadgeProps {
 }
 
 const Badge = memo(({ label, variant = 'primary', size = 'sm', style }: BadgeProps) => {
-  const getVariantStyles = (): ViewStyle => {
+  const getVariantStyles = (): { bg: string; text: string } => {
     switch (variant) {
       case 'primary':
-        return { backgroundColor: `${COLORS.primary}20`, color: COLORS.primary };
+        return { bg: `${COLORS.primary}20`, text: COLORS.primary };
       case 'secondary':
-        return { backgroundColor: `${COLORS.secondary}20`, color: COLORS.secondary };
+        return { bg: `${COLORS.secondary}20`, text: COLORS.secondary };
       case 'success':
-        return { backgroundColor: `${COLORS.success}20`, color: COLORS.success };
+        return { bg: `${COLORS.success}20`, text: COLORS.success };
       case 'warning':
-        return { backgroundColor: `${COLORS.warning}20`, color: COLORS.warning };
+        return { bg: `${COLORS.warning}20`, text: COLORS.warning };
       case 'error':
-        return { backgroundColor: `${COLORS.error}20`, color: COLORS.error };
+        return { bg: `${COLORS.error}20`, text: COLORS.error };
       case 'info':
-        return { backgroundColor: `${COLORS.info}20`, color: COLORS.info };
+        return { bg: `${COLORS.info}20`, text: COLORS.info };
       default:
-        return {};
+        return { bg: COLORS.gray100, text: COLORS.gray700 };
     }
   };
 
@@ -38,7 +38,7 @@ const Badge = memo(({ label, variant = 'primary', size = 'sm', style }: BadgePro
     <View
       style={[
         styles.badge,
-        { backgroundColor: variantStyles.backgroundColor },
+        { backgroundColor: variantStyles.bg },
         isSmall && styles.small,
         style,
       ]}
@@ -46,7 +46,7 @@ const Badge = memo(({ label, variant = 'primary', size = 'sm', style }: BadgePro
       <Text
         style={[
           styles.text,
-          { color: variantStyles.color },
+          { color: variantStyles.text },
           isSmall && styles.smallText,
         ]}
       >

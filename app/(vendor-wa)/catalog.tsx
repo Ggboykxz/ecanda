@@ -12,7 +12,7 @@ const MOCK_PRODUCTS = [
 export default function VendorWACatalogScreen() {
   const renderProduct = ({ item }: { item: typeof MOCK_PRODUCTS[0] }) => (
     <View style={styles.productCard}>
-      <Image source={{ uri: item.image }} style={styles.productImage} contentFit="cover" />
+      <Image source={{ uri: item.image }} style={styles.productImage} resizeMode="cover" />
       <View style={styles.productInfo}>
         <Text style={styles.productTitle} numberOfLines={2}>{item.title}</Text>
         <Text style={styles.productPrice}>{formatXAF(item.price)}</Text>

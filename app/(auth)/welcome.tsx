@@ -47,6 +47,7 @@ export default function WelcomeScreen() {
                   variant="primary"
                   size="lg"
                   fullWidth
+                  onPress={() => {}}
                 />
               </Link>
               <Link href="/(auth)/login/client" asChild>
@@ -55,6 +56,7 @@ export default function WelcomeScreen() {
                   variant="ghost"
                   size="md"
                   fullWidth
+                  onPress={() => {}}
                   textStyle={{ color: COLORS.white }}
                 />
               </Link>

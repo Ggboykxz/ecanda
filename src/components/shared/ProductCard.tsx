@@ -26,7 +26,7 @@ const ProductCard = memo(({ product, onPress, onAddToCart, variant = 'default' }
         <Image
           source={{ uri: product.images[0] || 'https://via.placeholder.com/150' }}
           style={styles.horizontalImage}
-          contentFit="cover"
+          resizeMode="cover"
         />
         <View style={styles.horizontalContent}>
           <Text style={styles.title} numberOfLines={2}>{product.title}</Text>
@@ -63,7 +63,7 @@ const ProductCard = memo(({ product, onPress, onAddToCart, variant = 'default' }
           <Image
             source={{ uri: product.images[0] || 'https://via.placeholder.com/150' }}
             style={styles.image}
-            contentFit="cover"
+            resizeMode="cover"
           />
           {hasDiscount && (
             <Badge label={`-${discountPercent}%`} variant="error" style={styles.discountBadge} />

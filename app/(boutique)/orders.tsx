@@ -47,7 +47,7 @@ export default function BoutiqueOrdersScreen() {
             <View style={styles.orderItems}>
               {order.items.map((item, idx) => (
                 <View key={idx} style={styles.orderItem}>
-                  <Image source={{ uri: item.image }} style={styles.itemImage} contentFit="cover" />
+                  <Image source={{ uri: item.image }} style={styles.itemImage} resizeMode="cover" />
                   <View style={styles.itemInfo}><Text style={styles.itemTitle}>{item.title}</Text><Text style={styles.itemQty}>x{item.qty}</Text></View>
                   <Text style={styles.itemPrice}>{formatXAF(item.price * item.qty)}</Text>
                 </View>

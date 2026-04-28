@@ -55,11 +55,9 @@ export default function LoginScreen() {
                 secureTextEntry={!showPassword}
               />
 
-              <Link href="/(auth)/forgot-password" asChild>
-                <Pressable style={styles.forgotPassword}>
+              <Pressable style={styles.forgotPassword}>
                   <Text style={styles.forgotText}>Mot de passe oublié ?</Text>
                 </Pressable>
-              </Link>
 
               <Button
                 title="Se connecter"

@@ -17,6 +17,7 @@ interface CartState {
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
   setDeliveryFee: (fee: number) => void;
+  recalculateTotals: () => void;
 }
 
 export const useCartStore = create<CartState>((set, get) => ({

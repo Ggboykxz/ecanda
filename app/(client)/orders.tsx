@@ -68,7 +68,7 @@ export default function OrdersScreen() {
             <View style={styles.orderItems}>
               {order.items.map((item, index) => (
                 <View key={index} style={styles.orderItem}>
-                  <Image source={{ uri: item.image }} style={styles.itemImage} contentFit="cover" />
+                  <Image source={{ uri: item.image }} style={styles.itemImage} resizeMode="cover" />
                   <View style={styles.itemInfo}>
                     <Text style={styles.itemTitle} numberOfLines={1}>{item.title}</Text>
                     <Text style={styles.itemQty}>x{item.quantity}</Text>

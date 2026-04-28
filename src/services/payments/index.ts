@@ -1,17 +1,20 @@
 import { httpsCallable } from 'firebase/functions';
-import { functions } from './config';
-import type { PaymentRequest, PaymentResponse, PaymentMethod } from '../../types/payment.types';
+import { functions } from '../firebase/config';
+import type { PaymentRequest, PaymentResponse } from '../../types/payment.types';
+
+export type PaymentMethod = 'airtel_money' | 'moov_money' | 'visa' | 'mastercard';
 
 export const initiatePayment = async (request: PaymentRequest): Promise<PaymentResponse> => {
   try {
     const initiateFn = httpsCallable(functions, 'initiatePayment');
     const result = await initiateFn(request);
     return result.data as PaymentResponse;
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Payment initiation error:', error);
+    const message = error instanceof Error ? error.message : 'Erreur lors du paiement';
     return {
       success: false,
-      message: error.message || 'Erreur lors du paiement',
+      message,
     };
   }
 };
@@ -21,10 +24,11 @@ export const checkPaymentStatus = async (transactionId: string): Promise<Payment
     const statusFn = httpsCallable(functions, 'checkPaymentStatus');
     const result = await statusFn({ transactionId });
     return result.data as PaymentResponse;
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Erreur lors de la vérification';
     return {
       success: false,
-      message: error.message || 'Erreur lors de la vérification',
+      message,
     };
   }
 };

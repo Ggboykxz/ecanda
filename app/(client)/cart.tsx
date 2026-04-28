@@ -38,7 +38,7 @@ export default function CartScreen() {
       <ScrollView showsVerticalScrollIndicator={false} style={styles.content}>
         {MOCK_CART_ITEMS.map((item) => (
           <View key={item.id} style={styles.cartItem}>
-            <Image source={{ uri: item.image }} style={styles.itemImage} contentFit="cover" />
+            <Image source={{ uri: item.image }} style={styles.itemImage} resizeMode="cover" />
             <View style={styles.itemDetails}>
               <Text style={styles.itemTitle} numberOfLines={2}>{item.title}</Text>
               <Text style={styles.itemVendor}>{item.vendor}</Text>

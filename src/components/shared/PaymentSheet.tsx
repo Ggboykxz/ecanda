@@ -3,14 +3,14 @@ import { View, Text, StyleSheet, Modal, Pressable, ScrollView } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 import BottomSheet, { BottomSheetView, BottomSheetBackdrop } from '@gorhom/bottom-sheet';
 import { useRef, useMemo, useCallback } from 'react';
-import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../constants/theme';
-import { formatXAF } from '../utils/formatCurrency';
-import Button from './ui/Button';
-import Input from './ui/Input';
-import { airtelPaymentService } from '../services/payments/airtel';
-import { moovPaymentService } from '../services/payments/moov';
-import { StripePaymentService, STRIPE_TEST_CARDS } from '../services/payments/stripe';
-import { useUIStore } from '../stores/uiStore';
+import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '../../constants/theme';
+import { formatXAF } from '../../utils/formatCurrency';
+import Button from '../ui/Button';
+import Input from '../ui/Input';
+import { airtelPaymentService } from '../../services/payments/airtel';
+import { moovPaymentService } from '../../services/payments/moov';
+import { StripePaymentService, STRIPE_TEST_CARDS } from '../../services/payments/stripe';
+import { useUIStore } from '../../stores/uiStore';
 
 type PaymentMethod = 'airtel_money' | 'moov_money' | 'visa' | 'mastercard';
 

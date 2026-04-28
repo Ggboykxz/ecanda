@@ -17,7 +17,7 @@ export default function BoutiqueCatalogScreen() {
 
   const renderProduct = ({ item }: { item: typeof MOCK_PRODUCTS[0] }) => (
     <Pressable style={styles.productCard}>
-      <Image source={{ uri: item.image }} style={styles.productImage} contentFit="cover" />
+      <Image source={{ uri: item.image }} style={styles.productImage} resizeMode="cover" />
       <View style={styles.productInfo}>
         <View style={styles.productHeader}>
           <Text style={styles.productTitle} numberOfLines={1}>{item.title}</Text>
