@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Pressable, Image, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
 import { formatXAF } from '@/src/utils/formatCurrency';
 import Button from '@/src/components/ui/Button';
@@ -13,6 +14,7 @@ const MOCK_PRODUCTS = [
 ];
 
 export default function VendorProductsScreen() {
+  const router = useRouter();
   const activeProducts = MOCK_PRODUCTS.filter(p => p.isAvailable).length;
   const outOfStock = MOCK_PRODUCTS.filter(p => !p.isAvailable).length;
 
@@ -41,11 +43,9 @@ export default function VendorProductsScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Mes produits</Text>
-        <Link href="/(vendor)/products/add" asChild>
-          <Pressable style={styles.addButton}>
-            <Ionicons name="add" size={20} color={COLORS.white} />
-          </Pressable>
-        </Link>
+        <Pressable style={styles.addButton} onPress={() => router.push('/(vendor)/products/add')}>
+          <Ionicons name="add" size={20} color={COLORS.white} />
+        </Pressable>
       </View>
 
       <View style={styles.statsRow}>
@@ -81,11 +81,9 @@ export default function VendorProductsScreen() {
       />
 
       <View style={styles.fab}>
-        <Link href="/(vendor)/products/add" asChild>
-          <Pressable style={styles.fabButton}>
-            <Ionicons name="add" size={24} color={COLORS.white} />
-          </Pressable>
-        </Link>
+        <Pressable style={styles.fabButton} onPress={() => router.push('/(vendor)/products/add')}>
+          <Ionicons name="add" size={24} color={COLORS.white} />
+        </Pressable>
       </View>
     </SafeAreaView>
   );
