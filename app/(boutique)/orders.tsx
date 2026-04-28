@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { COLORS, SPACING, FONT_SIZE, RADIUS, SHADOW } from '@/src/constants/theme';
 import { formatXAF, formatRelativeTime } from '@/src/utils/formatCurrency';
 import { ORDER_STATUS_LABELS } from '@/src/types/order.types';
+import type { OrderStatus } from '@/src/types/order.types';
 import Badge from '@/src/components/ui/Badge';
 import Button from '@/src/components/ui/Button';
 
@@ -32,7 +33,7 @@ export default function BoutiqueOrdersScreen() {
           <View key={order.id} style={styles.orderCard}>
             <View style={styles.orderHeader}>
               <View><Text style={styles.orderId}>{order.id}</Text><Text style={styles.orderTime}>{formatRelativeTime(order.createdAt)}</Text></View>
-              <Badge label={ORDER_STATUS_LABELS[order.status]} variant={order.status === 'pending' ? 'warning' : order.status === 'delivered' ? 'success' : 'info'} />
+              <Badge label={ORDER_STATUS_LABELS[order.status as OrderStatus]} variant={order.status === 'pending' ? 'warning' : order.status === 'delivered' ? 'success' : 'info'} />
             </View>
 
             <View style={styles.orderCustomer}>
